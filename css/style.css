@@ -206,6 +206,111 @@ body {
 }
 /* End Ceremony Section */
 
+/* Start Dress Code Section */
+#dresscode {
+    background: linear-gradient(180deg, #FFFDFD 0%, #FDF3F5 100%);
+    font-family: var(--font-Cormorant);
+    overflow-x: hidden;
+}
+
+.dresscode-card {
+    background: rgba(255, 255, 255, 0.88);
+    backdrop-filter: blur(8px);
+    border-radius: 24px;
+    border: 1px solid rgba(197, 164, 126, 0.35);
+    box-shadow: 0 12px 30px rgba(135, 71, 77, 0.07);
+}
+
+.dresscode-title {
+    font-family: var(--font-Cormorant);
+    font-size: 38px;
+    font-style: italic;
+    font-weight: 600;
+    color: #542E32;
+    letter-spacing: 0.5px;
+}
+
+.dresscode-subtitle {
+    max-width: 340px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #7D5358;
+}
+
+.blush-heart {
+    color: #DCA6B2;
+    font-size: 14px;
+}
+
+.attire-box {
+    background: #FFFDFD;
+    border: 1px solid rgba(223, 197, 201, 0.7);
+    border-radius: 18px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.attire-box:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(135, 71, 77, 0.08);
+}
+
+.attire-icon {
+    width: 44px;
+    height: 44px;
+    margin: 0 auto;
+    border-radius: 50%;
+    background: #FDF3F5;
+    color: #87474D;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    border: 1px solid rgba(197, 164, 126, 0.3);
+}
+
+.attire-heading {
+    font-size: 22px;
+    font-weight: 700;
+    color: #542E32;
+    letter-spacing: 0.5px;
+}
+
+.attire-desc {
+    font-size: 15px;
+    font-style: italic;
+    color: #87474D;
+}
+
+/* Circular Color Swatches */
+.color-swatch {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    display: inline-block;
+    border: 2px solid #FFFFFF;
+    box-shadow: 0 3px 8px rgba(84, 46, 50, 0.15);
+    transition: transform 0.2s ease;
+    cursor: pointer;
+}
+
+.color-swatch:hover {
+    transform: scale(1.18);
+}
+
+.swatch-caption {
+    display: block;
+    font-size: 12px;
+    letter-spacing: 0.4px;
+    color: #9A767A;
+}
+
+.dresscode-note {
+    font-size: 15px;
+    color: #7D5358;
+    letter-spacing: 0.3px;
+}
+/* End Dress Code Section */
+
 /* Start Countdown Section */
 #countdown {
     background: #FDF3F5;
@@ -624,3 +729,180 @@ body {
     animation: heartBeat 2.4s ease-in-out infinite;
     will-change: transform;
 }
+
+/* Start Aesthetic Venue & Illustrated Map Card */
+.venue-map-section {
+    width: 100%;
+    padding: 48px 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+.venue-map-card,
+.venue-map-card * {
+    box-sizing: border-box;
+}
+
+.venue-map-card {
+    width: 100%;
+    max-width: 440px;
+    margin: 0 auto;
+    padding: 36px 24px;
+    text-align: center;
+    background: linear-gradient(180deg, #FDF8F5 0%, #F9ECE8 100%);
+    border-radius: 24px;
+    border: 1px solid rgba(197, 164, 126, 0.4);
+    box-shadow: 0 14px 35px rgba(135, 71, 77, 0.08);
+    font-family: var(--font-Cormorant, Georgia, serif);
+    position: relative;
+    overflow: hidden;
+}
+
+.venue-title {
+    width: 100%;
+    margin: 0 0 6px;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.25;
+    letter-spacing: 2px;
+    color: #542E32;
+    text-transform: uppercase;
+}
+
+.venue-subtitle {
+    width: 100%;
+    margin: 0 0 16px;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 1.4;
+    letter-spacing: 2.5px;
+    color: #9A767A;
+    text-transform: uppercase;
+}
+
+/* Seamless Borderless Map Container */
+.illustrated-map-link {
+    display: block;
+    width: 100%;
+    max-width: 340px;
+    margin: 8px auto 14px;
+    text-decoration: none;
+}
+
+.illustrated-map-container {
+    position: relative;
+    width: 100%;
+    height: 210px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: transform 0.35s ease;
+}
+
+.illustrated-map-link:hover .illustrated-map-container {
+    transform: scale(1.02);
+}
+
+.vintage-map-svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/* Radial Fade Mask so street lines dissolve naturally into the card */
+.map-vignette-fade {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+        ellipse at center,
+        rgba(251, 242, 239, 0) 40%,
+        rgba(251, 242, 239, 0.78) 76%,
+        #FBEFEB 98%
+    );
+    pointer-events: none;
+}
+
+/* Center Teardrop Pin */
+.reference-pin-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -65%);
+    z-index: 2;
+    pointer-events: none;
+    animation: pinFloat 2.8s ease-in-out infinite;
+}
+
+@keyframes pinFloat {
+    0%, 100% { transform: translate(-50%, -65%); }
+    50% { transform: translate(-50%, -74%); }
+}
+
+.venue-address {
+    width: 100%;
+    margin: 0 0 22px;
+    font-size: 15px;
+    font-style: italic;
+    line-height: 1.5;
+    color: #63393E;
+}
+
+/* Pill Button ("GET DIRECTIONS >") */
+.aesthetic-dir-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    white-space: nowrap;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #542E32;
+    background: rgba(255, 255, 255, 0.65);
+    border: 1px solid #C5A47E;
+    padding: 11px 26px;
+    border-radius: 50px;
+    transition: all 0.25s ease;
+}
+
+.aesthetic-dir-btn:hover {
+    background: #87474D;
+    color: #FFFDFD;
+    border-color: #87474D;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(135, 71, 77, 0.2);
+}
+
+.aesthetic-dir-btn i {
+    font-size: 10px;
+}
+
+/* Laptop & Desktop View */
+@media (min-width: 992px) {
+    .venue-map-section {
+        padding: 64px 24px;
+    }
+
+    .venue-map-card {
+        max-width: 460px;
+        padding: 44px 36px;
+    }
+
+    .venue-title {
+        font-size: 26px;
+    }
+
+    .illustrated-map-link {
+        max-width: 360px;
+    }
+
+    .illustrated-map-container {
+        height: 225px;
+    }
+}
+/* End Aesthetic Venue & Illustrated Map Card */
