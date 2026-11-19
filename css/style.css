@@ -397,3 +397,230 @@ body {
     from { transform: translateY(20px); opacity: 0; }
     to { transform: translateY(0); opacity: 1; }
 }
+
+
+/* Scroll Reveal Animations */
+.reveal-left,
+.reveal-right,
+.reveal-up,
+.reveal-fade {
+    opacity: 0;
+    transition: all 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+    will-change: transform, opacity;
+}
+
+/* Slide from Left to Original Position */
+.reveal-left {
+    transform: translateX(-45px);
+}
+
+.reveal-right {
+    transform: translateX(45px);
+}
+
+/* Slide from Bottom to Original Position */
+.reveal-up {
+    transform: translateY(35px);
+}
+
+/* Pure Opacity Fade */
+.reveal-fade {
+    transform: scale(0.97);
+}
+
+/* Active state triggered on scroll */
+.reveal-left.active,
+.reveal-right.active,
+.reveal-up.active,
+.reveal-fade.active {
+    opacity: 1;
+    transform: translate(0, 0) scale(1);
+}
+
+/* Optional Stagger Delays (so items appear one after another) */
+.delay-1 { transition-delay: 0.15s; }
+.delay-2 { transition-delay: 0.3s; }
+.delay-3 { transition-delay: 0.45s; }
+
+
+/* Start Developer Credit Footer */
+.dev-footer {
+    background: #F9DCE1;
+    border-top: 1px solid rgba(197, 164, 126, 0.25);
+    font-family: var(--font-Cormorant);
+    color: var(--first-color);
+}
+
+.footer-divider {
+    width: 60px;
+    height: 1px;
+    background: #C5A47E;
+    opacity: 0.6;
+}
+
+.footer-crafted {
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    color: #7D5358;
+}
+
+.footer-heart {
+    color: #A36267;
+    font-size: 11px;
+    margin: 0 3px;
+}
+
+.footer-promo {
+    font-size: 15px;
+    font-weight: 600;
+    font-style: italic;
+    color: #542E32;
+}
+
+.dev-contact-pill {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    color: #87474D;
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid #C5A47E;
+    padding: 6px 16px;
+    border-radius: 50px;
+    transition: all 0.25s ease;
+}
+
+.dev-contact-pill:hover {
+    background: #87474D;
+    color: #FFFDFD;
+    border-color: #87474D;
+    transform: translateY(-2px);
+}
+
+.dev-link {
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    color: #63393E;
+    transition: color 0.2s ease;
+}
+
+.dev-link:hover {
+    color: #9E7B4F;
+}
+/* End Developer Credit Footer */
+
+/* Continuous Gentle Float (Rings, Balloons, Gifts) */
+@keyframes gentleFloat {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+/* Soft Sway for Floral Accents */
+@keyframes gentleSway {
+    0%, 100% {
+        transform: rotate(0deg) scale(1);
+    }
+    50% {
+        transform: rotate(2deg) scale(1.02);
+    }
+}
+
+/* Subtle Pulse for Wedding Rings / Heart */
+@keyframes softPulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.04);
+    }
+}
+
+/* Animation Utility Classes for Images */
+.img-float {
+    animation: gentleFloat 4s ease-in-out infinite;
+    will-change: transform;
+}
+
+.img-float-slow {
+    animation: gentleFloat 5.5s ease-in-out infinite;
+    animation-delay: 1s;
+    will-change: transform;
+}
+
+.img-pulse {
+    animation: softPulse 3.5s ease-in-out infinite;
+    will-change: transform;
+}
+
+/* Note: .flower1 already has rotate(-90deg), so keep its base rotation intact */
+.flower1.img-sway {
+    animation: flower1Sway 6s ease-in-out infinite;
+}
+
+@keyframes flower1Sway {
+    0%, 100% {
+        transform: rotate(-90deg) translateY(0px);
+    }
+    50% {
+        transform: rotate(-88deg) translateY(-4px);
+    }
+}
+
+.flower2.img-sway {
+    animation: flower2Sway 5.5s ease-in-out infinite;
+}
+
+@keyframes flower2Sway {
+    0%, 100% {
+        transform: rotate(0deg) translateY(0px);
+    }
+    50% {
+        transform: rotate(2deg) translateY(-4px);
+    }
+}
+
+/* Balloon1 already has rotate(25deg) */
+.balloon1.img-float {
+    animation: balloon1Float 4.5s ease-in-out infinite;
+}
+
+@keyframes balloon1Float {
+    0%, 100% {
+        transform: rotate(25deg) translateY(0px);
+    }
+    50% {
+        transform: rotate(27deg) translateY(-8px);
+    }
+}
+
+/* Footer Animations */
+.dev-footer {
+    overflow-x: hidden;
+}
+
+@keyframes heartBeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+    25% {
+        transform: scale(1.22);
+    }
+    50% {
+        transform: scale(1);
+    }
+    75% {
+        transform: scale(1.15);
+    }
+}
+
+.footer-heart {
+    display: inline-block;
+    animation: heartBeat 2.4s ease-in-out infinite;
+    will-change: transform;
+}
