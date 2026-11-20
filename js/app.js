@@ -171,3 +171,44 @@ const revealObserver = new IntersectionObserver((entries, observer) => {
 });
 
 revealElements.forEach(el => revealObserver.observe(el));
+
+// QR Image Modal Controls
+function openQrModal(src, captionText) {
+    const modal = document.getElementById('qrImageModal');
+    const modalImg = document.getElementById('qrModalImg');
+    const modalCaption = document.getElementById('qrModalCaption');
+
+    if (!modal || !modalImg) return;
+    modalImg.src = src;
+    modalImg.alt = captionText || 'QR Code';
+    if (modalCaption) {
+        modalCaption.textContent = captionText || '';
+    }
+
+    modal.classList.add('show');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeQrModal() {
+    const modal = document.getElementById('qrImageModal');
+    const modalImg = document.getElementById('qrModalImg');
+    if (!modal) return;
+
+    modal.classList.remove('show');
+    document.body.style.overflow = '';
+    if (modalImg) {
+        modalImg.src = '';
+    }
+}
+
+function handleQrBackdropClick(event) {
+    if (event.target.id === 'qrImageModal') {
+        closeQrModal();
+    }
+}
+
+document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+        closeQrModal();
+    }
+});

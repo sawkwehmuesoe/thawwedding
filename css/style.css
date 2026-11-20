@@ -57,9 +57,14 @@ body {
     color: #6E4247;
     font-family: var(--font-Vibes);
     letter-spacing: 1px;
-    font-size: 42px;
+    font-size: 37px;
     font-weight: 400;
     margin: 10px 0;
+}
+
+.intro-textboxs h3.thawnames{
+    font-size: 34px;
+    font-weight: 500;
 }
 
 .bibleverses {
@@ -110,6 +115,39 @@ body {
     bottom: 10px;
 }
 /* End Intro Section */
+
+/* Couple & Parents Stacked Layout */
+.couple-family-block {
+    position: relative;
+    z-index: 2;
+    padding: 0 12px;
+}
+
+.couple-name {
+    margin-bottom: 4px;
+}
+
+.parent-subline {
+    font-family: var(--font-Cormorant);
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 500;
+    color: #7D5358;
+    letter-spacing: 0.4px;
+    line-height: 1.4;
+}
+
+.parent-names-text {
+    font-style: normal;
+    font-weight: 600;
+    color: #542E32;
+}
+
+@media (max-width: 575.98px) {
+    .parent-subline {
+        font-size: 14.5px;
+    }
+}
 
 /* Start Ceremony Section */
 #ceremony {
@@ -310,6 +348,208 @@ body {
     letter-spacing: 0.3px;
 }
 /* End Dress Code Section */
+
+/* Start Wedding Gift QR Section (Image-Only + Modal) */
+.gift-qr-section {
+    padding: 56px 16px;
+    background: linear-gradient(180deg, #FDF8F5 0%, #FDF1F3 100%);
+    font-family: var(--font-Cormorant, Georgia, serif);
+    overflow-x: hidden;
+}
+
+.gift-qr-card,
+.gift-qr-card *,
+.qr-modal,
+.qr-modal * {
+    box-sizing: border-box;
+}
+
+.gift-qr-card {
+    background: rgba(255, 253, 253, 0.92);
+    border-radius: 24px;
+    padding: 36px 24px;
+    border: 1px solid rgba(197, 164, 126, 0.42);
+    box-shadow: 0 14px 34px rgba(135, 71, 77, 0.08);
+}
+
+.gift-kicker {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: #9A767A;
+    margin-bottom: 6px;
+}
+
+.gift-title {
+    font-size: clamp(28px, 4vw, 36px);
+    font-style: italic;
+    font-weight: 600;
+    color: #542E32;
+    margin-bottom: 8px;
+}
+
+.gift-subtitle {
+    max-width: 360px;
+    font-size: 15px;
+    font-style: italic;
+    color: #7D5358;
+    margin-bottom: 24px;
+}
+
+.qr-thumb-box {
+    max-width: 230px;
+    margin: 0 auto;
+    padding: 10px;
+    background: #FFFFFF;
+    border-radius: 18px;
+    border: 1px solid rgba(197, 164, 126, 0.45);
+    box-shadow: 0 8px 20px rgba(84, 46, 50, 0.08);
+    cursor: pointer;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.qr-thumb-box:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 26px rgba(135, 71, 77, 0.14);
+}
+
+.qr-thumb-img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.qr-caption {
+    font-size: 14px;
+    font-weight: 600;
+    color: #542E32;
+    letter-spacing: 0.4px;
+}
+
+/* Modal Lightbox */
+.qr-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: rgba(38, 18, 21, 0.72);
+    backdrop-filter: blur(4px);
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.qr-modal.show {
+    display: flex;
+    animation: modalFadeIn 0.22s ease;
+}
+
+@keyframes modalFadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.qr-modal-box {
+    position: relative;
+    background: #FFFDFD;
+    padding: 44px 18px 20px;
+    border-radius: 20px;
+    max-width: 390px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(197, 164, 126, 0.5);
+}
+
+.qr-modal-close {
+    text-decoration: none;
+    position: absolute;
+    top: 6px;
+    right: 12px;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    border: 1px solid rgba(135, 71, 77, 0.25);
+    background: #FDF3F5;
+    color: #542E32;
+    font-size: 22px;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.qr-modal-close:hover {
+    background: #87474D;
+    color: #FFFDFD;
+}
+
+.qr-modal-img {
+    display: block;
+    width: 100%;
+    max-height: 70vh;
+    object-fit: contain;
+    border-radius: 12px;
+}
+
+.qr-modal-caption {
+    margin-top: 12px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #542E32;
+}
+
+/* Transfer Slip Note Callout */
+.gift-transfer-note {
+    max-width: 440px;
+    padding: 12px 18px;
+    background: #FDF3F5;
+    border: 1px dashed rgba(197, 164, 126, 0.7);
+    border-radius: 14px;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #63393E;
+}
+
+.mm-note-text {
+    font-family: 'Noto Sans Myanmar', 'Padauk', sans-serif;
+    font-size: 13.5px;
+    line-height: 1.85;
+    color: #542E32;
+}
+
+.note-highlight {
+    color: #87474D;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+}
+
+.qr-modal-note {
+    margin-top: 6px;
+    padding: 6px 12px;
+    background: #FDF3F5;
+    border-radius: 50px;
+    display: inline-block;
+    font-size: 13.5px;
+    color: #63393E;
+}
+
+.qr-modal-note strong {
+    color: #87474D;
+}
+
+.mm-modal-sub {
+    font-family: 'Noto Sans Myanmar', 'Padauk', sans-serif;
+    font-size: 12.5px;
+    line-height: 1.75;
+    color: #542E32;
+    margin-top: 2px;
+}
+/* End Wedding Gift QR Section */
 
 /* Start Countdown Section */
 #countdown {

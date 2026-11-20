@@ -3,13 +3,16 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-        <title>Thaw Blut Mue & Nandar Thiri</title>
+        <title>Thaw Bluth Mue & Nandar Thiri</title>
 
         <!-- bootstrap css1 js1 -->
         <link rel="stylesheet" href="./libs/bootstrap/css/bootstrap.min.css">
 
         <!-- fontawesome css1 -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.css" integrity="sha512-4wfcoXlib1Aq0mUtsLLM74SZtmB73VHTafZAvxIp/Wk9u1PpIsrfmTvK0+yKetghCL8SHlZbMyEcV8Z21v42UQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+        <!-- Myanmar font  -->
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Myanmar:wght@400;600;700&display=swap" rel="stylesheet">
 
         <!-- custom css  -->
         <link rel="stylesheet" href="./css/style.css">
@@ -37,18 +40,34 @@
                         <p class="verses">Matthew 19:6</p>
                     </div>
 
-                    <h3 class="reveal-left delay-1">Nandar Thiri</h3>
-                    <div class="intro-images mx-auto reveal-fade delay-2">
+                    <!-- Bride & Her Parents -->
+                    <div class="couple-family-block reveal-left delay-1">
+                        <h3 class="couple-name mb-1">Nandar Thiri</h3>
+                        <p class="parent-subline mb-0">
+                            <span class="parent-names-text">U Soe Moe Aung &amp; Daw Yin Yin Nwet</span>
+                        </p>
+                    </div>
+
+                    <!-- Wedding Ring Image -->
+                    <div class="intro-images mx-auto my-3 reveal-fade delay-2">
                         <img src="./img/logo/ring.png" class="img-pulse" alt="ring">                    
                     </div>
-                    <h3 class="reveal-right delay-3">Thaw Bluth Mue</h3>
+
+                    <!-- Groom & His Parents -->
+                    <div class="couple-family-block reveal-left delay-3">
+                        <h3 class="couple-name mb-1 thawnames">Saw Thaw Bluth Mue</h3>
+                        <p class="parent-subline mb-0">
+                            <span class="parent-names-text">U Saw Sein Min &amp; Daw Naw Suzan</span>
+                        </p>
+                    </div>
+
                     
                 </div>
 
                 <img src="./img/flower/flowerside1.png" class="flower1 img-sway" alt="flower">                    
                 <img src="./img/flower/flowerside2.png" class="flower2 img-sway" alt="flower"> 
                 <img src="./img/logo/balloon1.png" class="balloon1 img-float" alt="balloon1">
-                <img src="./img/logo/gift1.png" class="balloon2 img-float-slow" alt="gift1">                  
+                <!-- <img src="./img/logo/gift1.png" class="balloon2 img-float-slow" alt="gift1">                   -->
                 
 
             </div>            
@@ -80,7 +99,7 @@
                                         <p class="borderdates py-2">2026</p>
                                     </div>
                                 </div>
-                                <div class="text-uppercase">At 9:00 AM</div>
+                                <div class="text-uppercase">At 4:00 PM</div>
 
                                 <img src="./img/logo/hand.png" class="hands reveal-up delay-1" alt="hand">
 
@@ -248,6 +267,67 @@
         </section>
         <!-- End Dress Code Section -->
 
+        <!-- Start Wedding Gift QR Section (Before Countdown) -->
+        <section id="gift-qr" class="gift-qr-section">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-sm-10 col-md-9 col-lg-7">
+                        <div class="gift-qr-card text-center reveal-up">
+
+                            <p class="gift-kicker reveal-fade">WEDDING BLESSING</p>
+                            <h2 class="gift-title reveal-left delay-1">Gift &amp; Blessing</h2>
+                            <p class="gift-subtitle mx-auto reveal-up delay-1">
+                                Tap a QR code to view larger and scan.
+                            </p>
+
+                            <div class="row g-4 justify-content-center align-items-start">
+                                <!-- PromptPay / SCB QR Image -->
+                                <div class="col-12 col-sm-6 reveal-up delay-2">
+                                    <div class="qr-thumb-box" onclick="openQrModal('./img/banner/scb.jfif', 'SCB Thai QR PromptPay')">
+                                        <img src="./img/banner/scb.jfif" alt="SCB Thai QR PromptPay" class="qr-thumb-img">
+                                    </div>
+                                    <p class="qr-caption mt-2 mb-0">PromptPay • SCB</p>
+                                </div>
+
+                                <!-- KBZPay QR Image -->
+                                <div class="col-12 col-sm-6 reveal-up delay-3">
+                                    <div class="qr-thumb-box" onclick="openQrModal('./img/banner/kbz.jfif', 'KBZPay QR Code')">
+                                        <img src="./img/banner/kbz.jfif" alt="KBZPay QR Code" class="qr-thumb-img">
+                                    </div>
+                                    <p class="qr-caption mt-2 mb-0">KBZPay • YIN YIN NWET</p>
+                                </div>
+                            </div>
+
+                            <!-- Bank Slip Note Instruction -->
+                            <div class="gift-transfer-note mx-auto mt-4 reveal-fade delay-3">
+                                <p class="mb-0">
+                                    Kindly write <strong class="note-highlight">"Thaw and Nandar"</strong> in the transfer note / memo on your bank slip <span class="blush-heart">♥</span>
+                                </p>
+                                <p class="mm-note-text mb-0">
+                                    ငွေလွှဲပြေစာ၏ Note တွင် <br> <strong class="note-highlight">"Thaw and Nandar"</strong> ဟု ရေးပေးပါရန် မေတ္တာရပ်ခံအပ်ပါသည်။
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- QR Lightbox Modal -->
+        <div id="qrImageModal" class="qr-modal" onclick="handleQrBackdropClick(event)">
+            <div class="qr-modal-box">
+                <a class="qr-modal-close" onclick="closeQrModal()" aria-label="Close modal">&times;</a>                
+                <img id="qrModalImg" src="" alt="Enlarged QR Code" class="qr-modal-img">
+                <p id="qrModalCaption" class="qr-modal-caption mb-0"></p>
+                <div class="qr-modal-note">
+                    <div>Transfer note: <strong>"Thaw and nandar"</strong></div>
+                    <div class="mm-modal-sub">Note တွင် <strong>"Thaw and nandar"</strong> ဟု ရေးပေးပါ။</div>
+                </div>
+            </div>
+        </div>
+        <!-- End Wedding Gift QR Section -->
+
         <!-- Start Countdown Section -->
         <section id="countdown" class="py-5 text-center">
             <div class="container">
@@ -299,25 +379,19 @@
                         <div class="rsvp-card p-4 p-md-5 reveal-up">
                             <div class="text-center mb-4">
                                 <h6 class="ceretitles mb-2">Join Our Celebration</h6>
-                                <p class="rsvp-subtitle">Kindly respond by November 15, 2026</p>
+                                <p class="rsvp-subtitle">Kindly respond by November 23, 2026</p>
                             </div>
 
                             <form id="rsvpForm" action="" method="POST" name="rsvpForm">
                                 <!-- Guest Name -->
                                 <div class="mb-4">
-                                    <label for="guestName" class="form-label rsvp-label">Enter your name</label>
+                                    <label for="guestName" class="form-label rsvp-label">Enter your name <span class="required-star" aria-hidden="true">*</span></label>
                                     <input type="text" class="form-control rsvp-input" id="guestName" name="name" placeholder="Name" required>
-                                </div>
-
-                                <!-- Guest Email (Optional or Required) -->
-                                <div class="mb-4">
-                                    <label for="guestEmail" class="form-label rsvp-label">Email Address</label>
-                                    <input type="email" class="form-control rsvp-input" id="guestEmail" name="email" placeholder="example@email.com" required>
-                                </div>
+                                </div>                     
 
                                 <!-- Attendance Radio Buttons -->
                                 <div class="mb-4">
-                                    <label class="form-label rsvp-label d-block mb-2">Will you be attending?</label>
+                                    <label class="form-label rsvp-label d-block mb-2">Will you be attending? <span class="required-star" aria-hidden="true">*</span></label>
                                     <div class="row g-2">
                                         <div class="col-12 col-sm-6">
                                             <label class="radio-card w-100" for="attendYes">
